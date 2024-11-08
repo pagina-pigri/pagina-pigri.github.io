@@ -14,3 +14,13 @@ function checkAnswer() {
         document.getElementById("second-page").style.display = "block";
     }
 }
+
+window.onload = function() {
+    const video = document.getElementById('myVideo');
+    
+    // Avviare il video a schermo intero
+    video.play();
+    video.requestFullscreen().catch(err => {
+        console.log("Errore nel passaggio a schermo intero: ", err);
+    });
+};
